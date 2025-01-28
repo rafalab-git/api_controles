@@ -5,4 +5,5 @@ venv
 *.csv
 /relatorios
 *.pyc
+__pychache__
 *.db
