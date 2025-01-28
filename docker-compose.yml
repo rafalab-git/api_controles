@@ -10,6 +10,7 @@ services:
     environment:
       # Variável lida no database.py (DB_NAME)
       DB_NAME: "controles.db"
+      TOKEN: ${TOKEN}
     volumes:
       # Monta o arquivo controles.db no host, para persistir
       - ./src:/src

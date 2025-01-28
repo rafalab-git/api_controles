@@ -22,6 +22,9 @@ RUN chmod -R 777 /app
 
 # Porta exposta (FastAPI padrão 8000)
 EXPOSE 9500
+ARG TOKEN
+
+ENV TOKEN=$TOKEN
 
 # Comando para rodar a aplicação com Uvicorn
 CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "9500"]
