@@ -12,6 +12,6 @@ services:
       DB_NAME: "controles.db"
     volumes:
       # Monta o arquivo controles.db no host, para persistir
-      - ./data:/app
+      - ./src:/src
     # Se quiser rodar em modo debug (auto reload):
     # command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
