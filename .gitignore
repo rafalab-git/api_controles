@@ -1,0 +1,7 @@
+.env
+venv
+*.ipynb
+*.xlsx
+*.csv
+/relatorios
+*.pyc

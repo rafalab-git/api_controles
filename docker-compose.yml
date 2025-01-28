@@ -1,0 +1,17 @@
+# docker-compose.yml
+
+version: "3.8"
+services:
+  api:
+    build: .
+    container_name: fastapi-controles
+    ports:
+      - "8000:8000"
+    environment:
+      # Variável lida no database.py (DB_NAME)
+      DB_NAME: "controles.db"
+    volumes:
+      # Monta o arquivo controles.db no host, para persistir
+      - ./data:/app
+    # Se quiser rodar em modo debug (auto reload):
+    # command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
