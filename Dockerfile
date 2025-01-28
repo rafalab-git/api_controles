@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY ./src /app/src
 
 # Porta exposta (FastAPI padrão 8000)
-EXPOSE 9000
+EXPOSE 9500
 
 # Comando para rodar a aplicação com Uvicorn
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "9000"]
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "9500"]

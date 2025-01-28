@@ -6,7 +6,7 @@ services:
     build: .
     container_name: fastapi-controles
     ports:
-      - "9000:9000"
+      - "9500:9500"
     environment:
       # Variável lida no database.py (DB_NAME)
       DB_NAME: "controles.db"
