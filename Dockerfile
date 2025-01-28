@@ -14,6 +14,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia o restante do código para /app
 COPY ./src /app/src
 
+# Executa o ls novamente no diretório /app para listar o conteúdo após a cópia
+RUN ls -lah /app
+
+# Garante que a pasta /app tenha permissões de escrita
+RUN chmod -R 777 /app
+
 # Porta exposta (FastAPI padrão 8000)
 EXPOSE 9500
 
